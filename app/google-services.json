@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "82035238450",
+    "firebase_url": "https://book-watch-9039e.firebaseio.com",
+    "project_id": "book-watch-9039e",
+    "storage_bucket": "book-watch-9039e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82035238450:android:4aefba1ee6e5f6fd",
+        "android_client_info": {
+          "package_name": "com.jawadjahangir.android.bookwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82035238450-hgv4r17i9ejhfhgsqntftg6tpllh9alb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jawadjahangir.android.bookwatch",
+            "certificate_hash": "bde0d6254de681795aeaca53507620a3b05b595d"
+          }
+        },
+        {
+          "client_id": "82035238450-jpp54ubdd1vag7h8d66oprp1eljhvujo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBElLSFf0l9TJTAqOV80o34Bo3FFWcmWNI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82035238450-jpp54ubdd1vag7h8d66oprp1eljhvujo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

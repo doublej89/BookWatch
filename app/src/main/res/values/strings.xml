@@ -1,0 +1,139 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">Book Watch</string>
+    <string name="content_authority">com.jawadjahangir.android.bookwatch.app</string>
+    <string name="action_search_internet">Search Google Books</string>
+    <!-- Button text in internet search activity -->
+    <string name="search_button_text">Search</string>
+    <!-- the Title of any book reference anywhere -->
+    <string name="title_field">Title</string>
+    <!-- Author label for any view that wants to display the author name -->
+    <string name="author_field">Author</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_searchedbook_list">SearchedBooks</string>
+    <string name="title_searchedbook_detail">SearchedBook Detail</string>
+    <string name="title_localbook_list">Local Books</string>
+    <string name="title_localbook_detail">Local Book Detail</string>
+
+    <!-- Hint for the name of borrower field in the UseTab fragment -->
+    <string name="name_of_borrower">Name of borrower</string>
+    <!-- textView label for name of borrower field -->
+    <string name="name_of_borrower_label">This book was loaned to</string>
+    <!-- Radio buttons in UseTab fragment -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!-- Read Question in UseTab fragment -->
+    <string name="read_question">Have you read this book?</string>
+
+    <!-- Names and labels, and content descriptions of different views in the detail view of a book list item -->
+    <string name="book_cover_content_description">book cover image</string>
+    <string name="google_books_ratings">Google Books Ratings</string>
+    <string name="publisher">Publisher</string>
+    <string name="date_of_publish">Date of Publish</string>
+    <string name="isbn">ISBN</string>
+    <string name="genera">Genera</string>
+    <string name="total_pages">Total Number of Pages</string>
+    <string name="desc">Description</string>
+
+    <!-- Content descriptions for entry fields -->
+    <string name="book_title_cont_desc">Enter book title</string>
+    <string name="author_cont_desc">Enter name of author</string>
+    <string name="rating_bar_cont_desc">Google books ratings for this book</string>
+    <string name="publisher_cont_desc">Enter publisher name</string>
+    <string name="date_of_publish_entry_cont_desc">Enter date of publish</string>
+    <string name="isbn_entry_cont_desc">Enter ISBN number</string>
+    <string name="genera_entry_cont_desc">Enter genera</string>
+    <string name="tot_pages_entry_cont_desc">Enter Total Pages Number</string>
+    <string name="desc_entry_cont_desc">Enter book description</string>
+    <string name="loan_stat">Name of the person the book is loaned to</string>
+
+    <!-- delete button text -->
+    <string name="delete">Delete</string>
+
+    <!-- strings related to reading progress -->
+    <string name="last_bookmarked_page">Last Bookmarked Page</string>
+
+    <!-- strings that will show if different book attributes, when loading from google books, are not available -->
+    <string name="unknown_author">Unknown Author</string>
+    <string name="unknown_publisher">Unknown Publisher</string>
+    <string name="unavailable_publish_date">Published date info not available</string>
+    <string name="unknown_genera">Unknown Genera</string>
+    <string name="unavailable_page_count">Page count info not available</string>
+    <string name="unavailable_desc">Description not available</string>
+    <string name="unavailable_isbn">ISBN not available</string>
+
+    <!-- statements saying whether the book was read by the user or loaned to someone -->
+    <string name="you_loaned_this_book">You loaned this book to <xliff:g id="loan">%1$s</xliff:g></string>
+    <string name="book_is_with_you">This book is supposed to be with you</string>
+    <string name="book_read">You have read this book</string>
+    <string name="book_not_read">You have not yet read this book</string>
+    
+    <!-- Name of default shelves -->
+    <string name="read">Read</string>
+    <string name="reading">Reading</string>
+    <string name="intend_to_read">Intend to Read</string>
+    <string name="favorites">Favorites</string>
+    <string name="loaned">Loaned</string>
+
+    <!-- Text message that'll appear in case the user haven't added any book to a particular shelf being opened
+    or in any shelf at all -->
+    <string name="no_book_added">You haven\'t added any book to <xliff:g id="loan">%1$s</xliff:g></string>
+    <string name="no_search_results">No search results for <xliff:g id="no_local_result">%1$s</xliff:g></string>
+    <string name="no_book_added_default">No books have been added to any shelf</string>
+    <string name="no_reading_message">You haven\'t added any book to the \"Reading\" shelf. If you are reading a book then add its reference to the \"Reading\" shelf, and start making regular bookmark updates as you progress in your reading.</string>
+
+
+    <!-- Alert dialog message and title for network non-availability -->
+    <string name="no_network_available">No Network Available</string>
+    <string name="wrong_with_network">Something is wrong with the network connection</string>
+
+    <!-- Message displayed if something went wrong retrieving search results from the internet -->
+    <string name="no_result_due_to_wrong_spelling">No results for <xliff:g id="no_result">%1$s</xliff:g>. Make sure you\'re using the right Title, Author name, or ISBN to search</string>
+    <string name="no_results_available">Cannot retrieve data from Google Books</string>
+    <string name="server_down">The Server is not returning data. Try again later</string>
+    <string name="server_invalid">The server is not returning valid data. Please check for an updated version of Book Watch.</string>
+
+    <!-- Toast message in case user hasn't entered any search query but still presses search -->
+    <string name="please_enter_something">Please enter a book Title, Author name, or ISBN. Any one will do</string>
+
+    <!-- Warning message if user chooses to delete a book reference -->
+    <string name="delete_confirmation">Are you sure you want to delete this book?</string>
+
+    <!-- strings related to shelf creation -->
+    <string name="create_shelf">Create Shelf</string>
+    <string name="shelf_already_exists">Shelf already exists. Enter different name</string>
+    <string name="cant_create_shelf">Cannot create shelf with no name</string>
+    <string name="enter_shelf_name">Enter shelf name</string>
+
+    <!-- strings related to storing reading progress of books the user is reading -->
+    <string name="not_bookmarked_yet">You haven\'t bookmarked any pages yet</string>
+    <string name="page_number_limit">Page number cannot be larger than the total number of pages in the book!</string>
+    <string name="non_negative_page_number">Page number cannot be negative!</string>
+    <string name="bookmark_updated">Bookmark updated!</string>
+
+    <string name="add_book">Add Book</string>
+
+    <!-- labels for the sliding tabs in the details page -->
+    <string name="details_tab">Details</string>
+    <string name="extras_tab">Extras</string>
+
+    <!-- menu item names -->
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="all_books">All Books</string>
+    <string name="search_locally">Search Locally</string>
+    <string name="all_shelves">All Shelves</string>
+
+    <!-- action bar titles for different pages -->
+    <string name="book_details">Book Details</string>
+    <string name="search_books">Search Books</string>
+    <string name="books_kept_in">Books in <xliff:g id="books_in_shelf">%1$s</xliff:g></string>
+    <string name="now_reading">Now Reading</string>
+    <string name="search_results">Search Results for <xliff:g id="local_search_result">%1$s</xliff:g></string>
+
+
+    <!-- Test ad Id -->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+</resources>
