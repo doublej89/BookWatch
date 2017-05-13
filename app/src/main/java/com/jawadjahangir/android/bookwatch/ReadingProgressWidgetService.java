@@ -17,8 +17,7 @@ import com.jawadjahangir.android.bookwatch.data.BooksContract;
  * helper methods.
  */
 public class ReadingProgressWidgetService extends IntentService {
-    // TODO: Rename actions, choose action names that describe tasks that this
-    // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
+    
     private static final String ACTION_UPDATE_READING_PROGRESS_WIDGET = "com.jawadjahangir.android.bookwatch.action.FOO";
 
     public ReadingProgressWidgetService() {
@@ -35,33 +34,17 @@ public class ReadingProgressWidgetService extends IntentService {
     public static void startActionUpdateWidget(Context context) {
         Intent intent = new Intent(context, ReadingProgressWidgetService.class);
         intent.setAction(ACTION_UPDATE_READING_PROGRESS_WIDGET);
-//        intent.putExtra(EXTRA_PARAM1, param1);
-//        intent.putExtra(EXTRA_PARAM2, param2);
+
         context.startService(intent);
     }
 
-    /**
-     * Starts this service to perform action Baz with the given parameters. If
-     * the service is already performing a task this action will be queued.
-     *
-     * @see IntentService
-     */
-    // TODO: Customize helper method
-//    public static void startActionBaz(Context context, String param1, String param2) {
-//        Intent intent = new Intent(context, ReadingProgressWidgetService.class);
-//        intent.setAction(ACTION_BAZ);
-//        intent.putExtra(EXTRA_PARAM1, param1);
-//        intent.putExtra(EXTRA_PARAM2, param2);
-//        context.startService(intent);
-//    }
+   
 
     @Override
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
             final String action = intent.getAction();
             if (ACTION_UPDATE_READING_PROGRESS_WIDGET.equals(action)) {
-//                final String param1 = intent.getStringExtra(EXTRA_PARAM1);
-//                final String param2 = intent.getStringExtra(EXTRA_PARAM2);
                 handleActionUpdateWidget();
             }
         }
@@ -110,12 +93,5 @@ public class ReadingProgressWidgetService extends IntentService {
                 dateTime, appWidgetIds);
 }
 
-    /**
-     * Handle action Baz in the provided background thread with the provided
-     * parameters.
-     */
-    private void handleActionBaz(String param1, String param2) {
-        // TODO: Handle action Baz
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+  
 }
