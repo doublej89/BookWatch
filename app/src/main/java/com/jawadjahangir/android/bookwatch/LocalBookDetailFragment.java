@@ -27,15 +27,7 @@ public class LocalBookDetailFragment extends Fragment{
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
     static Button bookAddButton;
-    CharSequence Titles[]={getString(R.string.details_tab),getString(R.string.extras_tab)};
-
-
-
-
-
-
-
-
+    CharSequence Titles[];
 
 
     /**
@@ -48,6 +40,7 @@ public class LocalBookDetailFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Titles = new CharSequence[]{getString(R.string.details_tab),getString(R.string.extras_tab)};
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the dummy content specified by the fragment
@@ -57,13 +50,6 @@ public class LocalBookDetailFragment extends Fragment{
             adapter =  new ViewPagerAdapter(getActivity().getSupportFragmentManager(),Titles,2,
                     getArguments().getInt(ARG_ITEM_ID));
 
-
-
-//            Activity activity = this.getActivity();
-//            CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
-//            if (appBarLayout != null) {
-//                appBarLayout.setTitle(mItem.title);
-//            }
         }
     }
 
