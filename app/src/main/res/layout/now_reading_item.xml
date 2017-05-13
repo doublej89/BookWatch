@@ -25,7 +25,7 @@
             android:layout_marginTop="16dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="title"
+           
              />
 
         <TextView
@@ -57,6 +57,7 @@
                 android:layout_marginStart="18dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
+                android:contentDescription="@string/book_cover_content_description"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <TextView
@@ -78,7 +79,7 @@
                 android:id="@+id/author_name"
                 android:textColor="@color/black"
                 android:contentDescription="@string/author_field"
-                android:text="author"/>
+                />
 
 
             <TextView
@@ -102,7 +103,6 @@
                 android:layout_below="@id/page_count_label"
                 android:textColor="@color/black"
                 android:contentDescription="@string/total_pages"
-                android:text="count"
                 android:textSize="18sp"/>
         </RelativeLayout>
 
@@ -120,7 +120,7 @@
             android:textSize="18sp"
             android:layout_marginStart="18dp"
             android:layout_marginLeft="18dp"
-            android:text="You're on page number"/>
+            android:text="@string/current_page_label"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
             android:layout_marginLeft="18dp"
             android:layout_marginTop="2dp"
             android:textColor="@color/springGreen"
-            android:text="20"
+           
             />
 
 
@@ -142,7 +142,7 @@
             android:layout_marginTop="18dp"
             android:layout_marginStart="18dp"
             android:layout_marginLeft="18dp"
-            android:text="Last updated on"/>
+            android:text="@string/last_bookmark_update"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -153,7 +153,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginTop="2dp"
-            android:text="Wed, 4 Jul 2001 at 12:08:56 -0700"/>
+            />
 
         <View
             android:layout_width="match_parent"
@@ -174,7 +174,7 @@
             android:layout_marginBottom="16dp"
             android:padding="10dp"
             android:textSize="18sp"
-            android:hint="Update Page Number"/>
+            android:hint="@string/update_page_number"/>
 
 
 
