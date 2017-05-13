@@ -13,4 +13,4 @@ If the user has stored book references in the "Reading" shelf, that means the us
 to the references. Clicking on that shelf in the main page would open an interface that would allow the user to regularly
 update the bookmark (the page number at which the user last left off) as the user makes regular progress with the book.
 When the user makes the update, the homescreen widget will be updated as well. The homescreen widget will show the title,
-book cover, last bookmarked, and the date & time of the last bookmark of the book the user is currently reading.
+book cover, last bookmarked page number, and the date & time of the last bookmark of the book the user is currently reading.
