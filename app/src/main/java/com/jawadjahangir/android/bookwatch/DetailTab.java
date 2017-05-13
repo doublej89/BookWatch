@@ -102,17 +102,6 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
         thumbnail_urlView = (TextView) rootView.findViewById(R.id.thumbnail_url);
 
 
-
-//        addBookButton = (Button) rootView.findViewById(R.id.add_book);
-//
-//        addBookButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                alertDialogBuilder.create();
-//                alertDialogBuilder.show();
-//            }
-//        });
-
         if (getArguments().containsKey(SearchedBookDetailFragment.ARG_ITEM_ID)) {
             FetchBookDetailTask fetchBookDetailTask = new FetchBookDetailTask();
             fetchBookDetailTask.execute(getArguments().getString(SearchedBookDetailFragment.ARG_ITEM_ID));
@@ -356,7 +345,7 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
 
                 InputStream inputStream = urlConnection.getInputStream();
                 if (inputStream == null){
-                    //Log.d(TAG, "There is no input stream!");
+                    
                     return;
                 }
                 reader = new BufferedReader(new InputStreamReader(inputStream));
