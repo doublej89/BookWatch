@@ -29,17 +29,7 @@ public class SearchedBookDetailFragment extends Fragment{
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
     Button bookAddButton;
-    CharSequence Titles[]={getString(R.string.details_tab),getString(R.string.extras_tab)};
-
-
-
-
-
-
-    /**
-     * The dummy content this fragment is presenting.
-     */
-
+    CharSequence Titles[];
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -51,22 +41,15 @@ public class SearchedBookDetailFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Titles= new CharSequence[]{getString(R.string.details_tab),getString(R.string.extras_tab)};
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
-            // Load the dummy content specified by the fragment
-            // arguments. In a real-world scenario, use a Loader
-            // to load content from a content provider.
-            //mItem = SearchedBookContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-
-            //Log.d("Book Details", "book_id: " + getArguments().getString(ARG_ITEM_ID));
+           
             adapter =  new ViewPagerAdapter(getActivity().getSupportFragmentManager(),Titles,2,
                     getArguments().getString(ARG_ITEM_ID));
 
             Activity activity = this.getActivity();
-            //CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
-//            if (appBarLayout != null && mItem != null) {
-//                appBarLayout.setTitle(mItem.title);
-//            }
+          
         }
 
 
@@ -106,24 +89,12 @@ public class SearchedBookDetailFragment extends Fragment{
             }
         });
 
-
-
-        // Show the dummy content as text in a TextView.
-//        if (mItem != null) {
-//            //((TextView) rootView.findViewById(R.id.searchedbook_detail)).setText(mItem.title);
-//            Log.d("Book Details Load", "view are supposed to load from here");
-//
-//
-//        } else {
-//            Log.d("Book Details Load", "the book object is empty");
-//        }
-
         return rootView;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        //getLoaderManager().initLoader(SHELVES_LOADER, null, this);
+        
         super.onActivityCreated(savedInstanceState);
     }
 
