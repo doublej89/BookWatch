@@ -16,7 +16,7 @@
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/book_title_cont_desc"
         android:id="@+id/search_result_title"
-        android:text="title"
+       
         />
     <TextView
         android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/author_cont_desc"
         android:padding="10dp"
-        android:text="authors" />
+         />
 
 
 
@@ -120,7 +120,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="10dp"
         android:contentDescription="@string/publisher_cont_desc"
-        android:text="publisher" />
+        />
 
     <View
         android:layout_width="match_parent"
