@@ -25,8 +25,6 @@ public class SearchedBookDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_searchedbook_detail);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
