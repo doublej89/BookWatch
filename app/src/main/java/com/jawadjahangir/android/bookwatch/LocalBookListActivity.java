@@ -94,7 +94,7 @@ public class LocalBookListActivity extends AppCompatActivity implements LoaderMa
 
         recyclerView = findViewById(R.id.localbook_list);
         assert recyclerView != null;
-        //setupRecyclerView((RecyclerView) recyclerView);
+       
 
         if (findViewById(R.id.localbook_detail_container) != null) {
             // The detail container view will be present only in the
@@ -105,7 +105,7 @@ public class LocalBookListActivity extends AppCompatActivity implements LoaderMa
         }
 
         if (savedInstanceState != null && savedInstanceState.containsKey(SELECTED_KEY)) {
-            // The gridview probably hasn't even been populated yet.  Actually perform the
+            // The listview probably hasn't even been populated yet.  Actually perform the
             // swapout in onLoadFinished.
             mPosition = savedInstanceState.getInt(SELECTED_KEY);
         }
@@ -140,7 +140,7 @@ public class LocalBookListActivity extends AppCompatActivity implements LoaderMa
     @Override
     public void onSaveInstanceState(Bundle outState) {
         // When tablets rotate, the currently selected list item needs to be saved.
-        // When no item is selected, mPosition will be set to GridView.INVALID_POSITION,
+        // When no item is selected, mPosition will be set to ListView.INVALID_POSITION,
         // so check for that before storing.
         if (mPosition != ListView.INVALID_POSITION) {
             outState.putInt(SELECTED_KEY, mPosition);
