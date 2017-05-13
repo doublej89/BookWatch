@@ -139,6 +139,8 @@
     <string name="widget_title">title</string>
     <string name="widget_page_number">0</string>
     <string name="widget_date_time">Wed, 4 Jul 2001 at 12:08:56 -0700</string>
+    <string name="last_bookmark_page">Your last bookmarked page</string>
+    <string name="last_bookmark_date_time">Date and Time of your last Bookmark</string>
 
 
     <!-- Test ad Id -->
