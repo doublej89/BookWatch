@@ -21,7 +21,7 @@
                 android:layout_marginStart="18dp"
                 android:textSize="24sp"
                 android:textColor="@color/black"
-                android:text="loan" />
+                 />
 
             <TextView
                 android:id="@+id/read_view"
@@ -32,7 +32,7 @@
                 android:layout_marginStart="18dp"
                 android:textSize="24sp"
                 android:textColor="@color/black"
-                android:text="read"/>
+                />
 
             <View
                 android:layout_width="match_parent"
