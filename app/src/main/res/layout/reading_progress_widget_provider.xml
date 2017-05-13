@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Your last bookmarked page"
+        android:text="@string/last_bookmark_page"
         android:textSize="18sp"
         android:textColor="@color/lightGrey"/>
 
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Date and Time of your last Bookmark"
+        android:text="@string/last_bookmark_date_time"
         android:textSize="18sp"
         android:textColor="@color/lightGrey"/>
 
