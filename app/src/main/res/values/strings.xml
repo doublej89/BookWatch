@@ -129,6 +129,16 @@
     <string name="books_kept_in">Books in <xliff:g id="books_in_shelf">%1$s</xliff:g></string>
     <string name="now_reading">Now Reading</string>
     <string name="search_results">Search Results for <xliff:g id="local_search_result">%1$s</xliff:g></string>
+    
+    <!-- Now reading interface -->
+    <string name="current_page_label">You\'re on page number</string>
+    <string name="last_bookmark_update">Bookmark last updated on</string>
+    <string name="update_page_number">Update Page Number</string>
+
+    <!-- widget default text -->
+    <string name="widget_title">title</string>
+    <string name="widget_page_number">0</string>
+    <string name="widget_date_time">Wed, 4 Jul 2001 at 12:08:56 -0700</string>
 
 
     <!-- Test ad Id -->
