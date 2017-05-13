@@ -21,7 +21,7 @@
                 android:contentDescription="@string/title_field"
                 android:id="@+id/search_result_title"
                 android:textColor="@color/black"
-                android:text="title"
+                
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:contentDescription="@string/author_field"
-                android:text="authors" />
+                 />
 
             <View
                 android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                 android:layout_gravity="center_horizontal"
                 style="?android:attr/ratingBarStyleIndicator"
                 android:contentDescription="@string/rating_bar_cont_desc"
-                android:text="0.0" />
+                 />
 
             <View
                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:contentDescription="@string/total_pages"
-                android:text="page count"/>
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -143,7 +143,7 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:contentDescription="@string/publisher"
-                android:text="publisher" />
+                 />
 
             <View
                 android:layout_width="match_parent"
@@ -169,7 +169,7 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:contentDescription="@string/date_of_publish"
-                android:text="publishing date"/>
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -195,7 +195,7 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:contentDescription="@string/isbn"
-                android:text="isbn"/>
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -221,7 +221,7 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black"
                 android:contentDescription="@string/genera"
-                android:text="Genera"/>
+                />
 
 
 
