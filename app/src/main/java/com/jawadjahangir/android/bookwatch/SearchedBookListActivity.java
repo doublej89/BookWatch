@@ -61,14 +61,7 @@ public class SearchedBookListActivity extends AppCompatActivity implements Recyc
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -88,7 +81,7 @@ public class SearchedBookListActivity extends AppCompatActivity implements Recyc
         }
 
         if (savedInstanceState != null && savedInstanceState.containsKey(SELECTED_KEY)) {
-            // The gridview probably hasn't even been populated yet.  Actually perform the
+            // The listview probably hasn't even been populated yet.  Actually perform the
             // swapout in onLoadFinished.
             mPosition = savedInstanceState.getInt(SELECTED_KEY);
         }
@@ -108,7 +101,7 @@ public class SearchedBookListActivity extends AppCompatActivity implements Recyc
     @Override
     public void onSaveInstanceState(Bundle outState) {
         // When tablets rotate, the currently selected list item needs to be saved.
-        // When no item is selected, mPosition will be set to GridView.INVALID_POSITION,
+        // When no item is selected, mPosition will be set to ListView.INVALID_POSITION,
         // so check for that before storing.
         if (mPosition != ListView.INVALID_POSITION) {
             outState.putInt(SELECTED_KEY, mPosition);
