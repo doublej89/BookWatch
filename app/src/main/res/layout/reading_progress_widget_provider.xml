@@ -16,7 +16,7 @@
         android:textStyle="bold"
         android:textSize="32sp"
         android:textColor="@color/white"
-        tools:text="title"/>
+        tools:text="@string/widget_title"/>
 
     <ImageView
         android:id="@+id/widget_book_cover"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
+        android:contentDescription="@string/book_cover_content_description"
          />
 
     <TextView
@@ -43,14 +44,8 @@
         android:textStyle="bold"
         android:textSize="32sp"
         android:textColor="@color/lightYellow"
-        tools:text="123" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
-
+        tools:text="@string/widget_page_number" />
+   
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,6 +63,6 @@
         android:textStyle="bold"
         android:textSize="24sp"
         android:textColor="@color/salmon"
-        tools:text="123" />
+        tools:text="@string/widget_date_time" />
 
 </LinearLayout>
