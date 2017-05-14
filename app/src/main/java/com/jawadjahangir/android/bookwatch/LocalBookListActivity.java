@@ -190,14 +190,17 @@ public class LocalBookListActivity extends AppCompatActivity implements LoaderMa
             if (!TextUtils.isEmpty(shelf_name)) {
                 emptyView.setText(getString(R.string.no_book_added, shelf_name));
                 emptyView.setContentDescription(getString(R.string.no_book_added, shelf_name));
+                recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(null, null));
                 return;
             } else if (!TextUtils.isEmpty(queryString)) {
                 emptyView.setText(getString(R.string.no_search_results, queryString));
                 emptyView.setContentDescription(getString(R.string.no_search_results, queryString));
+                recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(null, null));
                 return;
             } else {
                 emptyView.setText(getString(R.string.no_book_added_default));
                 emptyView.setContentDescription(getString(R.string.no_book_added_default));
+                recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(null, null));
                 return;
             }
         }
