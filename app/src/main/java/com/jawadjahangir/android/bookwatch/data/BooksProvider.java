@@ -45,11 +45,9 @@ public class BooksProvider extends ContentProvider {
         final String authority = BooksContract.ContentAuthority;
 
         matcher.addURI(authority, BooksContract.PATH_SHELF, SHELF);
-        //matcher.addURI(authority, BooksContract.PATH_SHELF + "/#", SHELF_WITH_ID);
         matcher.addURI(authority, BooksContract.PATH_SHELF + "/*", SHELF_WITH_NAME);
         matcher.addURI(authority, BooksContract.PATH_SHELF_ITEM, SHELF_ITEM);
         matcher.addURI(authority, BooksContract.PATH_SHELF_ITEM + "/*", SHELF_ITEM_WITH_NAME);
-        //matcher.addURI(authority, BooksContract.PATH_SHELF_ITEM + "/*/*", SHELF_ITEM_WITH_BOOK_ID);
         matcher.addURI(authority, BooksContract.PATH_SHELF_ITEM + "/*/*/*", SHELF_ITEM_LOCAL_SEARCH);
         matcher.addURI(authority, BooksContract.PATH_SHELF_ITEM + "/*/*", SHELF_ITEM_WITH_ID);
         matcher.addURI(authority, BooksContract.PATH_SHELF_ITEM + "/*/*/*/*", SHELF_ITEM_TITLE_AUTHOR);
@@ -95,8 +93,7 @@ public class BooksProvider extends ContentProvider {
     @Nullable
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
-        //Log.d("Local Search", "You searched for: " + BooksContract.SHELF_ITEM_ENTRY.getLocalSearchString(uri));
-        //Log.d("Query Uri", uri.toString());
+        
         Cursor retCursor;
         switch (sUriMatcher.match(uri)) {
             case SHELF:
@@ -148,18 +145,6 @@ public class BooksProvider extends ContentProvider {
                         sortOrder
                 );
                 break;
-//            case SHELF_ITEM_WITH_BOOK_ID:
-//                selection = BooksContract.SHELF_ITEM_ENTRY.TABLE_NAME + "." +
-//                        BooksContract.SHELF_ITEM_ENTRY.COLUMN_BOOK_ID + " = ? ";
-//                selectionArgs = new String[] {BooksContract.SHELF_ITEM_ENTRY.getBookId(uri)};
-//                retCursor = mBooksByShelfQueryBuilder.query(booksDbHelper.getReadableDatabase(),
-//                        projection,
-//                        selection,
-//                        selectionArgs,
-//                        null,
-//                        null,
-//                        sortOrder);
-//                break;
             case SHELF_ITEM_WITH_ID:
                 selection = BooksContract.SHELF_ITEM_ENTRY._ID + " = ? ";
                 selectionArgs = new String[] {BooksContract.SHELF_ITEM_ENTRY.getBookDbId(uri)};
@@ -197,13 +182,15 @@ public class BooksProvider extends ContentProvider {
                 selectionArgs = new String[] {"%" + BooksContract.SHELF_ITEM_ENTRY.getLocalSearchString(uri) + "%",
                         "%" + BooksContract.SHELF_ITEM_ENTRY.getLocalSearchString(uri) + "%"};
 
-                retCursor = mBooksByShelfQueryBuilder.query(booksDbHelper.getReadableDatabase(),
+                retCursor = booksDbHelper.getReadableDatabase().query(
+                        BooksContract.SHELF_ITEM_ENTRY.TABLE_NAME,
                         projection,
                         selection,
                         selectionArgs,
                         null,
                         null,
-                        sortOrder);
+                        sortOrder
+                );
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
@@ -276,16 +263,6 @@ public class BooksProvider extends ContentProvider {
                         selectionArgs
                 );
                 break;
-//            case SHELF_ITEM_WITH_ID:
-//                selection = BooksContract.SHELF_ITEM_ENTRY.TABLE_NAME + "." + BooksContract.SHELF_ITEM_ENTRY.COLUMN_SHELF_NAME +
-//                        " = ? AND " + BooksContract.SHELF_ITEM_ENTRY.TABLE_NAME + "." +
-//                        BooksContract.SHELF_ITEM_ENTRY.COLUMN_BOOK_ID + " = ? ";
-//                selectionArgs = new String[] {BooksContract.SHELF_ITEM_ENTRY.getBookShelfName(uri),
-//                        BooksContract.SHELF_ITEM_ENTRY.getBookId(uri)};
-//                rowsDeleted = booksDbHelper.getWritableDatabase().delete(BooksContract.SHELF_ITEM_ENTRY.TABLE_NAME,
-//                        selection,
-//                        selectionArgs);
-//                break;
             default:
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
         }
