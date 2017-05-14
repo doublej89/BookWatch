@@ -58,7 +58,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingStart="@dimen/activity_horizontal_margin"
-        android:paddingTop="128dp"
+        android:paddingTop="256dp"
          />
 
 </android.support.design.widget.CoordinatorLayout>
