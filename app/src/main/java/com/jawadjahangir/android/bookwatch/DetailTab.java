@@ -72,7 +72,7 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         alertDialogBuilder = new AlertDialog.Builder(getActivity());
-        alertDialogBuilder.setTitle("Choose the shelf you want to add the book to");
+        alertDialogBuilder.setTitle(getString(R.string.choose_shelf));
 
 
         radiobuttonContainer = new LinearLayout(getActivity());
@@ -138,7 +138,7 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
         }
 
         alertDialogBuilder.setView(radiobuttonContainer);
-        alertDialogBuilder.setPositiveButton("Add",
+        alertDialogBuilder.setPositiveButton(getString(R.string.add),
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
@@ -147,7 +147,7 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
                                         titleView.getText().toString(), authorsView.getText().toString()),
                                 null, null, null, null);
                         if (cursor != null && cursor.getCount() > 0) {
-                            Toast.makeText(getActivity(), "You've already added this book",
+                            Toast.makeText(getActivity(), getString(R.string.already_added_toast),
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             String shelfName = "";
@@ -182,7 +182,7 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
                             values.put(BooksContract.SHELF_ITEM_ENTRY.COLUMN_SHELF_NAME, shelfName);
 
                             if (UseTab.checkedRadio != null && UseTab.borrowerField != null) {
-                                Log.d("Detail Tab", "use tab fields not empty");
+               
                                 int read_stat = 0;
                                 if (UseTab.checkedRadio.getText().equals("Yes")) {
                                     read_stat = 1;
@@ -193,13 +193,13 @@ public class DetailTab extends Fragment implements LoaderManager.LoaderCallbacks
                             }
 
                             getActivity().getContentResolver().insert(BooksContract.SHELF_ITEM_ENTRY.CONTENT_URI, values);
-                            Toast.makeText(getActivity(), "You've added a book to " + shelfName,
+                            Toast.makeText(getActivity(), getString(R.string.book_added_toast) + shelfName,
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
 
-        alertDialogBuilder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton(getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 getActivity().finish();
